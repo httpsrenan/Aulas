@@ -69,12 +69,36 @@ public class Ordenacao {
         System.out.println("Número de trocas: " + troca);
     }
 
+    public static int pesqBin(int x, int[] v){
+        int inicio = 0;
+        int fim = v.length - 1;
+        int meio = 0;
+        while (inicio <= fim) {
+            meio = (inicio + fim) / 2;
+
+            if(x == v[meio]){
+                return meio;
+            } else if (x > v[meio]) {
+                inicio = meio + 1;
+            } else {
+                fim = meio - 1;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] vetor = {4,7,5,2,8,1,6,3};
         int[] vetor2 = {4,7,5,2,8,1,6,3};
         int[] vetor3 = {4,7,5,2,8,1,6,3};
+        int[] vetor4 = {10,20,30,40,50,60,70,80,90};
         selectionSort(vetor);
+        System.out.println("\n");
         selectionSortOtimizado(vetor2);
+        System.out.println("\n");
         bubbleSort(vetor3);
+        System.out.println("\n");
+        int result = pesqBin(80, vetor4);
+        System.out.println("Onde esta o valor x no vetor: " + result);
     }
 }
