@@ -21,9 +21,15 @@ public class Main {
         gravaArquivoCSV(Lista, "dogs");
         System.out.println("Csv gravado");
 
+        System.out.println(" -------------------------------");
         System.out.println("Lendo e exibindo o arquivo csv");
         System.out.println(" -------------------------------");
         leExibeArquivoCSV("dogs");
+
+        System.out.println(" -------------------------------");
+        System.out.println("Lendo com split e exibindo o arquivo csv");
+        System.out.println(" -------------------------------");
+        leImportrquivoCsv("dogs");
     }
 
     public static void gravaArquivoCSV(List<Cachorro> Lista, String nomeArq) {
@@ -53,12 +59,10 @@ public class Main {
             System.out.println("Erro ao gravar arquivo csv!");
             erro.printStackTrace();
             deuRuim = true;
-        }
-        finally {
+        } finally {
             try {
                 saida.close();
-            }
-            catch (IOException erro) {
+            } catch (IOException erro) {
                 System.out.println("Erro ao fechar arquivo csv!");
                 deuRuim = true;
             }
@@ -78,8 +82,7 @@ public class Main {
         try {
             arq = new FileReader(nomeArq);
             entrada = new Scanner(arq).useDelimiter(";|\\n");
-        }
-        catch (FileNotFoundException erro){
+        } catch (FileNotFoundException erro) {
             System.out.println("Arquivo inexistente!");
             System.exit(1);
         }
@@ -97,7 +100,7 @@ public class Main {
                             titulo1, titulo2, titulo3, titulo4);
 
                     cabecalho = false;
-                }else {
+                } else {
                     Integer id = entrada.nextInt();
                     String nome = entrada.next();
                     String porte = entrada.next();
@@ -107,16 +110,72 @@ public class Main {
 
                 }
             }
-        }
-        catch (NoSuchElementException erro) {
+        } catch (NoSuchElementException erro) {
             System.out.println("Arquivo com problema");
             erro.printStackTrace();
             deuRuim = true;
-        }
-        catch (IllegalStateException erro){
+        } catch (IllegalStateException erro) {
             System.out.println("Erro na leitura");
             erro.printStackTrace();
             deuRuim = true;
+        } finally {
+            try {
+                entrada.close();
+                arq.close();
+            } catch (IOException erro) {
+                System.out.println("Erro ao fechar arquivo csv!");
+                deuRuim = true;
+            }
+            if (deuRuim) {
+                System.exit(1);
+            }
+        }
+    }
+
+    public static void leImportrquivoCsv(String nomeArq) {
+        Reader arq = null;
+        BufferedReader entrada = null;
+        nomeArq += ".csv";
+        List<Cachorro> Lista = new ArrayList<>();
+
+        // Bloco Try-Cath para abrir o arquivo
+        try {
+            arq = new InputStreamReader(new FileInputStream(nomeArq), "UTF-8");
+            entrada = new BufferedReader(arq);
+        } catch (IOException erro) {
+            System.out.println("Erro ao abrir arquivo csv!");
+            System.exit(1);
+        }
+
+        // Try-Cath para ler o arquivo
+        try {
+            String[] registro;
+            String linha = entrada.readLine();
+
+            registro = linha.split(";");
+            System.out.printf("%4s %-10s %-9s %4s\n", registro[0], registro[1], registro[2], registro[3]);
+
+            linha = entrada.readLine();
+
+            while (linha != null) {
+                registro = linha.split(";");
+
+                Integer id = Integer.valueOf(registro[0]);
+                String nome = registro[1];
+                String porte = registro[2];
+                Double peso = Double.valueOf(registro[3].replace(',', '.'));
+                Cachorro dog = new Cachorro(id, nome, porte, peso);
+
+                Lista.add(dog);
+
+                System.out.printf("%4d %-10s %-9S %4.1f\n",
+                        id, nome, porte, peso);
+
+                linha = entrada.readLine();
+            }
+        } catch (IOException erro) {
+            System.out.println("Erro ao ler arquivo csv!");
+            erro.printStackTrace();
         }
         finally {
             try {
@@ -125,11 +184,11 @@ public class Main {
             }
             catch (IOException erro) {
                 System.out.println("Erro ao fechar arquivo csv!");
-                deuRuim = true;
             }
-            if (deuRuim) {
-                System.exit(1);
-            }
+        }
+        System.out.println("\nLista lida do arquivo:");
+        for (Cachorro dog : Lista) {
+            System.out.println(dog);
         }
     }
 }

@@ -6,10 +6,11 @@ hist(idade)
 # 2- Simulação de Jogadores Visitando a Loja por Hora (rpois())
 chegada <- rpois(8, 30)
 hist(chegada)
+barplot(chegada)
 
 # 3- Simulação de Uso de Cupons Virtuais (rbinom())
-cupons <- rbinom(1, 500, 0.45)
-cupons
+cupons <- rbinom(500, 1, 0.45)
+barplot(table(cupons))
 
 # 4- Além de amostras, probabilidades com Distribuições (pnorm, pbinom, ppois)
 
