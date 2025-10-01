@@ -1,9 +1,9 @@
 package school.sptech;
 
 public class Loja {
-    private static Integer pedidosRealizados;
-    private static Integer descontosAplicados;
-    private static Integer pedidosCancelados;
+    private static Integer pedidosRealizados = 0;
+    private static Integer descontosAplicados = 0;
+    private static Integer pedidosCancelados = 0;
     static Double desconto = 0.0;
 
     public Loja() {
@@ -13,21 +13,21 @@ public class Loja {
     }
 
     public static void aplicarPromocao(Pedido produto){
-        System.out.println("O produto " + produto + " está em promoção");
+        System.out.println("O produto " + produto.getProduto() + " está em promoção");
         produto.setItemPromocional(true);
     }
 
     public static void cancelarPedido(Pedido codigo){
-        System.out.println("O pedido de código " + codigo + " foi cancelado.");
+        System.out.println("O pedido de código " + codigo.getCodigo() + " foi cancelado.");
         codigo.setCancelado(true);
-        setPedidosCancelados(+1);
+        setPedidosCancelados(getPedidosCancelados()+1);
     }
 
     public static void  aplicarDesconto(Pedido pedido, Double porcentagem){
         if(pedido.getItemPromocional() == true){
             System.out.println("Foi aplicado " + porcentagem +"% de desconto ao pedido de código " + pedido.getCodigo());
             desconto = porcentagem;
-            setDescontosAplicados(+1);
+            setDescontosAplicados(getDescontosAplicados()+1);
         }else{
             System.out.println("Pedido não elegível para desconto, operação não finalizada.");
         }
@@ -44,12 +44,13 @@ public class Loja {
             System.out.println("VALOR TOTAL: R$" + total);
             if (pedido.getItemPromocional() == true){
                 System.out.println("ITEM PROMOCIONAL: SIM");
-                total = (total * desconto) - total;
+                Double valorDesconto = total * (desconto / 100);
+                total = total - valorDesconto;
                 System.out.println("Valor com desconto: " + total);
 
             }
             System.out.println("TOTAL A SER PAGO: R$" + total);
-            setPedidosRealizados(+1);
+            setPedidosRealizados(getPedidosRealizados()+1);
         }else{
             System.out.println("PEDIDO CANCELADO, NÃO FOI POSSIVEL REALIZAR A OPERAÇÃO");
         }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df35a4f9-c7f9-49b3-9173-5f2a13bed747" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Calculo Comp/aula_06/.idea/aula_06.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/src/main/java/school/sptech/Filme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_filme/src/main/java/school/sptech/Streaming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_livros/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_livros/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_livros/src/main/java/school/sptech/Livro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desafio_livros/src/main/java/school/sptech/Prateleira.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ordenacao/src/main/java/school/sptech/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ordenacao/src/main/java/school/sptech/Ordenacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Calculo Comp/aula_07/coletas-dados.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/src/main/java/school/sptech/Aluno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/src/main/java/school/sptech/Secretaria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-aluno/src/main/java/school/sptech/TesteAluno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/src/main/java/school/sptech/Loja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/src/main/java/school/sptech/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associacao-loja/src/main/java/school/sptech/TestePedido.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="32nUbxldy2ofPr8wqlkI3w2jpAa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/Renan/Downloads/SPTECH/Aulas/LP/aula_06/desafio-relacionamento/src/main/java/school/sptech/Main.java"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df35a4f9-c7f9-49b3-9173-5f2a13bed747" name="Changes" comment="" />
+      <created>1758055908556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758055908556</updated>
+    </task>
+    <servers />
+  </component>
+</project>
