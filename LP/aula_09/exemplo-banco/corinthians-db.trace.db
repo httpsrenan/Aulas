@@ -1,0 +1,3 @@
+2025-10-01 13:49:58.810984-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TIME" already exists; SQL statement:
+CREATE TABLE time(id int primary key auto_increment,nome varchar(50),qtdJogadores int) [42101-232]
